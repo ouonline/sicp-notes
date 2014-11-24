@@ -1,0 +1,6 @@
+(define (div-series s1 s2)
+  (let ((c2 (stream-car s2)))
+    (if (= c2 0)
+      (display "error\n")
+      (mul-series (scale-stream s1 (/ 1 c2))
+                  (invert-unit-series (scale-stream s2 (/ 1 c2)))))))

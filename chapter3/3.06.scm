@@ -1,0 +1,10 @@
+(define (my-rand arg)
+  (define init-value 0)
+
+  (define (dispatch arg)
+    (cond ((eq? arg 'generate)
+           (+ init-value (random)))
+          ((eq? arg 'reset)
+           (lambda (value)
+             (set! init-value value)))
+          (else (error "...")))))

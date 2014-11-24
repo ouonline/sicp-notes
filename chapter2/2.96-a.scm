@@ -1,0 +1,6 @@
+(define (pseudoremainder-terms a b)
+  (let ((o1 (car (first-term a)))
+        (o2 (car (first-term b)))
+        (c (cadr (first-term b)))
+        (factor (exp c (+ 1 (- o1 o2)))))
+    (div-terms a (mul b factor))))
